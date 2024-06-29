@@ -15,7 +15,9 @@ If you want test database , controller , model I suggest you write this code in 
 php artisan test
 ## Step 3: Send requests
 Read documention and send requests step by step
-
+### swagger document
+http://localhost:8000/api/documentation
+### postman document
 https://documenter.getpostman.com/view/24141572/2sA3drGuEG
 
 ## Manage Exception
