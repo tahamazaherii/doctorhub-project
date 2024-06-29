@@ -42,9 +42,9 @@ class AuthController extends Controller
         *            @OA\Schema(
         *               type="object",
         *               required={"name","email", "password"},
-        *               @OA\Property(property="name", type="text"),
-        *               @OA\Property(property="email", type="text"),
-        *               @OA\Property(property="password", type="password"),
+        *               @OA\Property(property="name", type="text", example="ali"  , description="enter your name"),
+        *               @OA\Property(property="email", type="email" , example="ali@gmail"  , description="enter your email"),
+        *               @OA\Property(property="password", type="password" , example="123456789"  , description="enter your password"),
         *
         *            ),
         *        ),
@@ -115,8 +115,8 @@ class AuthController extends Controller
         *            @OA\Schema(
         *               type="object",
         *               required={"email", "password"},
-        *               @OA\Property(property="email", type="email"),
-        *               @OA\Property(property="password", type="password")
+        *               @OA\Property(property="email", type="email", example="ali@gmail"  , description="enter your email"),
+        *               @OA\Property(property="password", type="password" , example="123456789"  , description="enter your password")
         *            ),
         *        ),
         *    ),

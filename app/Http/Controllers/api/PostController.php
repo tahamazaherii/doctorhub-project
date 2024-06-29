@@ -20,7 +20,8 @@ class PostController extends Controller
    /**
  * @OA\Get(
  *     path="/api/posts",
- *     summary="Get a paginated list of posts with user info",
+ *     summary="Get All Posts",
+ *     description="Get all post ",
  *     tags={"post"},
  *     security={{ "bearerAuth":{} }},
  *     @OA\Parameter(
@@ -74,6 +75,8 @@ class PostController extends Controller
  *     )
  * )
  */
+
+
     public function index()
     {
         //
@@ -88,14 +91,15 @@ class PostController extends Controller
      * @OA\Post(
      *     path="/api/posts",
      *     summary="Create a new post",
+     *     description="Create a new post",
      *     tags={"post"},
      *     security={{ "bearerAuth":{} }},
      *     @OA\RequestBody(
      *         required=true,
      *         @OA\JsonContent(
      *             required={"title","body"},
-     *             @OA\Property(property="title", type="string", example="Post Title"),
-     *             @OA\Property(property="body", type="string", example="Post body content")
+     *             @OA\Property(property="title", type="string", example="Post Title"  , description="title of post"),
+     *             @OA\Property(property="body", type="string", example="Post body content" , description="body of post")
      *         )
      *     ),
      *     @OA\Response(
@@ -160,14 +164,13 @@ class PostController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     */
+
      /**
      * @OA\Get(
      *     path="/api/posts/{post}",
      *     summary="Get a specific post by ID",
-     *      tags={"post"},
+     *     description="Get a specific post by ID",
+     *     tags={"post"},
      *     security={{ "bearerAuth":{} }},
      *     @OA\Parameter(
      *         name="post",
@@ -219,13 +222,12 @@ class PostController extends Controller
         return response()->json(['post' => $post]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+
     /**
      * @OA\Put(
      *     path="/api/posts/{post}",
      *     summary="Update a specific post by ID",
+     *     description="Update a specific post by ID",
      *      tags={"post"},
      *     security={{ "bearerAuth":{} }},
      *     @OA\Parameter(
@@ -239,8 +241,8 @@ class PostController extends Controller
      *         required=true,
      *         @OA\JsonContent(
      *             required={"title","body"},
-     *             @OA\Property(property="title", type="string", example="Updated Post Title"),
-     *             @OA\Property(property="body", type="string", example="Updated post body content")
+     *             @OA\Property(property="title", type="string", example="Updated Post Title" , description="Updated title field "),
+     *             @OA\Property(property="body", type="string", example="Updated post body content" , description="Updated body field ")
      *         )
      *     ),
      *     @OA\Response(
@@ -372,4 +374,13 @@ class PostController extends Controller
 
         return response()->json(['message' => 'پست شما با موفقیت حذف شد.'],200);
     }
+
+
+
+
+
+
+
+
+
 }

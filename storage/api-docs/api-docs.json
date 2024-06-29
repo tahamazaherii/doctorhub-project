@@ -24,13 +24,19 @@
                                 ],
                                 "properties": {
                                     "name": {
-                                        "type": "text"
+                                        "description": "enter your name",
+                                        "type": "text",
+                                        "example": "ali"
                                     },
                                     "email": {
-                                        "type": "text"
+                                        "description": "enter your email",
+                                        "type": "email",
+                                        "example": "ali@gmail"
                                     },
                                     "password": {
-                                        "type": "password"
+                                        "description": "enter your password",
+                                        "type": "password",
+                                        "example": "123456789"
                                     }
                                 },
                                 "type": "object"
@@ -93,10 +99,14 @@
                                 ],
                                 "properties": {
                                     "email": {
-                                        "type": "email"
+                                        "description": "enter your email",
+                                        "type": "email",
+                                        "example": "ali@gmail"
                                     },
                                     "password": {
-                                        "type": "password"
+                                        "description": "enter your password",
+                                        "type": "password",
+                                        "example": "123456789"
                                     }
                                 },
                                 "type": "object"
@@ -194,7 +204,8 @@
                 "tags": [
                     "post"
                 ],
-                "summary": "Get a paginated list of posts with user info",
+                "summary": "Get All Posts",
+                "description": "Get all post ",
                 "operationId": "3db3501546bc1365f08721cfcfccecce",
                 "parameters": [
                     {
@@ -352,6 +363,7 @@
                     "post"
                 ],
                 "summary": "Create a new post",
+                "description": "Create a new post",
                 "operationId": "547a053592489e19c9a4bf7d0f8ce80c",
                 "requestBody": {
                     "required": true,
@@ -364,10 +376,12 @@
                                 ],
                                 "properties": {
                                     "title": {
+                                        "description": "title of post",
                                         "type": "string",
                                         "example": "Post Title"
                                     },
                                     "body": {
+                                        "description": "body of post",
                                         "type": "string",
                                         "example": "Post body content"
                                     }
@@ -486,6 +500,7 @@
                     "post"
                 ],
                 "summary": "Get a specific post by ID",
+                "description": "Get a specific post by ID",
                 "operationId": "964b9d9cf9a6f00f7059f28cee7b4ba9",
                 "parameters": [
                     {
@@ -604,6 +619,7 @@
                     "post"
                 ],
                 "summary": "Update a specific post by ID",
+                "description": "Update a specific post by ID",
                 "operationId": "2eb0a6ef886141851f0f0af2efcc9b06",
                 "parameters": [
                     {
@@ -627,10 +643,12 @@
                                 ],
                                 "properties": {
                                     "title": {
+                                        "description": "Updated title field ",
                                         "type": "string",
                                         "example": "Updated Post Title"
                                     },
                                     "body": {
+                                        "description": "Updated body field ",
                                         "type": "string",
                                         "example": "Updated post body content"
                                     }
